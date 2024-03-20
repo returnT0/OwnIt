@@ -6,4 +6,7 @@
   body {
     @apply bg-primary;
   }
+  .main-container {
+    @apply flex min-h-screen justify-center flex-1 flex-col items-center bg-none py-20 px-20;
+  }
 }

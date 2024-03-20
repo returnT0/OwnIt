@@ -204,12 +204,12 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'jetbrains': ['JetBrains Mono'],
-        'gabarito': ['Gabarito'],
-        'cormorant-garamond': ['Cormorant Garamond'],
+        'hepta': ['Hepta Slab'],
+        'bellota': ['Bellota Text'],
+        'bebas': ['Bebas Neue'],
       },
       colors: {
-        "primary": "#b27373",
+        "primary": "#ffffff",
         "secondary": "#666563",
         "pink-main" : "#fda5d9",
         "purple-main": "#6d29ff",
