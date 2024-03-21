@@ -1,0 +1,12 @@
+<div *ngIf="showHelpIcon" class="relative w-full">
+  <div class="absolute bottom-8 right-8">
+    <div class="flex flex-row-reverse items-center text-center h-full">
+      <img src="assets/help.svg" alt="hero-image" class="w-8 h-8 cursor-pointer"
+           (mouseenter)="onMouseEnter()"
+           (mouseleave)="onMouseLeave()"/>
+      <span *ngIf="showHoverText" class="text-sm bg-white p-1 w-full font-hepta font-medium text-[#9C9C9C]">
+      Click the text in the middle of the screen
+    </span>
+    </div>
+  </div>
+</div>

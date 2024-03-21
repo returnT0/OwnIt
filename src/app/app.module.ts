@@ -8,6 +8,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AboutComponent } from './components/about/about.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { NavComponent } from './components/nav/nav.component';
+import { HelpinfoComponent } from './components/helpinfo/helpinfo.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { NavComponent } from './components/nav/nav.component';
     ProfileComponent,
     AboutComponent,
     NotfoundComponent,
-    NavComponent
+    NavComponent,
+    HelpinfoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

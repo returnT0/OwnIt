@@ -1,8 +1,29 @@
 <section class="flex flex-col justify-center items-center -mt-4">
   <div class="flex justify-center items-center text-center ">
     <div class="h-fit w-fit">
-      <h1 class="text-[12em] font-semibold font-hepta text-dark-2">OwnIt</h1>
+      <h1 *ngIf="!showInput"
+          class="typing-effect text-[12em] font-semibold font-bebas text-dark-2 animate-blink cursor-pointer"
+          (click)="handleTextClick()">
+        {{ displayedText }}
+      </h1>
+      <div *ngIf="showInput"
+           class="flex flex-col gap-y-3 items-center justify-center text-center font-hepta text-heading2-normal">
+        <div *ngIf="showDomainInput" class="div_form_input">
+          <input type="text" [(ngModel)]="domain" (ngModelChange)="onDomainChange()" class="form_input"
+                 placeholder="Enter your domain" autofocus/>
+        </div>
+        <div *ngIf="showEmailInput" class="div_form_input">
+          <input type="email" [(ngModel)]="email" (ngModelChange)="onEmailChange()" class="form_input"
+                 placeholder="Enter your email"/>
+        </div>
+        <div *ngIf="showPasswordInput" class="div_form_input">
+          <input type="password" [(ngModel)]="password" (ngModelChange)="onPasswordChange()" class="form_input"
+                 placeholder="Enter your password"/>
+        </div>
+        <div *ngIf="showSubmitButton" class="div_form_input">
+          <button class="form_button">Submit</button>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="relative"></div>
 </section>

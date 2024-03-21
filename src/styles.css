@@ -9,4 +9,14 @@
   .main-container {
     @apply flex min-h-screen justify-center flex-1 flex-col items-center bg-none py-20 px-20;
   }
+
+  .div_form_input {
+    @apply flex-col gap-y-3 items-center justify-center text-center
+  }
+  .form_input {
+    @apply bg-none text-center border-0 placeholder-stone-400 focus:outline-none focus:ring-0 focus:border-none block w-full !important;
+  }
+  .form_button {
+    @apply bg-dark-1 text-light-1 py-2 px-3 w-[10.3em] font-bebas rounded-sm tracking-wide cursor-pointer hover:bg-dark-1/95 active:bg-dark-1/90 !important;
+  }
 }
