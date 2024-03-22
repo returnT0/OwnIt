@@ -1,1 +1,16 @@
-<p>about works!</p>
+<section class="w-full h-full flex flex-col items-center font-hepta">
+  <div class="flex flex-col items-center justify-center">
+    <div *ngIf="!showAboutText" (click)="handleTextClick()"
+         class="flex justify-center items-center text-center">
+      <p class="about-text text-dark-1 text-heading1-normal">Gaining a domain can be as simple as this website</p>
+    </div>
+  </div>
+  <div *ngIf="showAboutText" class="text-heading2-normal w-[30em] tracking-wide leading-relaxed">
+    <span class="underline font-semibold">OwnIt</span> is the simplest way to find and purchase the perfect domain name for your online presence.
+    Whether it's launching a business, starting a personal blog, or building a unique brand,
+    OwnIt empowers you to secure your piece of the internet.
+  </div>
+  <div *ngIf="showAboutText" class="div_form_input pt-16">
+    <button class="form_button w-[14.3em] py-3 text-heading3-normal">get started</button>
+  </div>
+</section>

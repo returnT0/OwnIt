@@ -1,0 +1,15 @@
+@keyframes swipeUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.swipe-up {
+  animation: swipeUp 0.6s forwards;
+}
+

@@ -4,7 +4,7 @@
 
 @layer components {
   body {
-    @apply bg-primary;
+    @apply bg-primary selection:bg-dark-1 selection:text-light-1;
   }
 
   .main-container {
@@ -18,9 +18,9 @@
   .form_input {
     @apply bg-none text-center border-0 placeholder-stone-400 focus:outline-none focus:ring-0 focus:border-none block w-full !important;
   }
-  
+
   .form_button {
-    @apply bg-dark-1 text-light-1 py-2 px-3 w-[10.3em] font-bebas rounded-sm tracking-wide cursor-pointer hover:bg-dark-1/90 active:bg-dark-1/80 transition-colors ease-in-out !important;
+    @apply bg-dark-1 text-light-1 py-2 px-3 w-[10.3em] font-bebas rounded-sm tracking-wide cursor-pointer hover:bg-dark-1/90 active:bg-dark-1/80 transition-colors ease-in-out;
   }
 
   .nav_div {

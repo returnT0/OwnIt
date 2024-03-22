@@ -6,15 +6,12 @@ import {Component, OnInit} from '@angular/core';
   styleUrl: './helpinfo.component.css'
 })
 export class HelpinfoComponent implements OnInit {
-  showInput = false;
   showHelpIcon = false;
   showHoverText = false;
 
   ngOnInit() {
     setTimeout(() => {
-      if (!this.showInput) {
         this.showHelpIcon = true;
-      }
     }, 10000);
   }
 
