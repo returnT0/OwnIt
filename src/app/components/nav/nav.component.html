@@ -1,10 +1,9 @@
-<section class="relative font-bebas">
-  <div class="absolute top-2 left-4">
-    <div class="flex flex-row gap-x-3">
-      <p>1</p>
-      <p>2</p>
-      <p>3</p>
-      <p>4</p>
+<section class="relative">
+  <div class="absolute top-4 left-4">
+    <div class="nav_div">
+      <p [routerLink]="['/landing']" class="nav_header">home</p>
+      <p [routerLink]="['/profile']" class="nav_header">profile</p>
+      <p [routerLink]="['/about']" class="nav_header">about</p>
     </div>
   </div>
 </section>
