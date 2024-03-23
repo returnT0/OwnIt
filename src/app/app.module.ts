@@ -10,6 +10,10 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HelpinfoComponent } from './components/helpinfo/helpinfo.component';
 import {FormsModule} from "@angular/forms";
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {AuthInterceptor} from "./shared/interceptors/auth.interceptor";
+import {LoggingInterceptor} from "./shared/interceptors/logging.interceptor";
+import {ErrorInterceptor} from "./shared/interceptors/error.interceptor";
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import {FormsModule} from "@angular/forms";
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

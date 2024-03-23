@@ -1,34 +1,28 @@
-import {Injectable} from '@angular/core';
-import {environment} from "../../environments/environment.development";
-import {JwtHelperService} from '@auth0/angular-jwt';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {Router} from "@angular/router";
-import {Observable, tap} from "rxjs";
+import { Injectable } from '@angular/core';
+import { environment } from "../../environments/environment.development";
+import { JwtHelperService } from '@auth0/angular-jwt';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Router } from "@angular/router";
+import { Observable, tap } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-
   private url = environment.server.url;
 
-  constructor(private http: HttpClient, private router: Router, private jwtHelper: JwtHelperService) {
-  }
+  constructor(private http: HttpClient, private router: Router, private jwtHelper: JwtHelperService) {}
 
   signIn(credentials: Credentials): Observable<any> {
-    return this.http.post<any>(this.url + 'api/authentication/login', credentials, {
-      headers: new HttpHeaders({'Content-Type': 'application/json'})
-    }).pipe(tap(res => {
-      if (res && res.token) {
-        localStorage.setItem('jwt', res.token);
-      }
-    }));
+    return this.http.post<any>(`${this.url}api/authentication/login`, credentials, {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    }).pipe(tap(this.handleAuthenticationResponse.bind(this)));
   }
 
   signUp(registrationData: any): Observable<any> {
-    return this.http.post(this.url + 'api/authentication/register', registrationData, {
-      headers: new HttpHeaders({'Content-Type': 'application/json'})
-    });
+    return this.http.post<any>(`${this.url}api/authentication/register`, registrationData, {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    }).pipe(tap(this.handleAuthenticationResponse.bind(this)));
   }
 
   setToken(token: string): void {
