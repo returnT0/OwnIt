@@ -5,7 +5,7 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent  implements OnInit {
+export class AboutComponent implements OnInit {
   showAboutText = false;
 
   ngOnInit() {

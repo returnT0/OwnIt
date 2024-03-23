@@ -1,9 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-helpinfo',
-  templateUrl: './helpinfo.component.html',
-  styleUrl: './helpinfo.component.css'
+  selector: 'app-helpinfo', templateUrl: './helpinfo.component.html', styleUrl: './helpinfo.component.css'
 })
 export class HelpinfoComponent implements OnInit {
   showHelpIcon = false;
@@ -11,7 +9,7 @@ export class HelpinfoComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-        this.showHelpIcon = true;
+      this.showHelpIcon = true;
     }, 10000);
   }
 

@@ -1,8 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
+
 @Component({
-  selector: 'app-landing',
-  templateUrl: './landing.component.html',
-  styleUrl: './landing.component.css'
+  selector: 'app-landing', templateUrl: './landing.component.html', styleUrl: './landing.component.css'
 })
 export class LandingComponent implements OnInit, OnDestroy {
   domainPattern = /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+$/;

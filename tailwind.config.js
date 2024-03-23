@@ -211,7 +211,7 @@ module.exports = {
       colors: {
         "primary": "#ffffff",
         "secondary": "#666563",
-        "pink-main" : "#fda5d9",
+        "pink-main": "#fda5d9",
         "purple-main": "#6d29ff",
         blue: "#0095F6",
         "logout-btn": "#FF5A5A",
@@ -237,16 +237,16 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {height: 0},
+          to: {height: "var(--radix-accordion-content-height)"},
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+          from: {height: "var(--radix-accordion-content-height)"},
+          to: {height: 0},
         },
         blink: {
-          '0%, 100%': { borderColor: 'transparent' },
-          '50%': { borderColor: 'black' },
+          '0%, 100%': {borderColor: 'transparent'},
+          '50%': {borderColor: 'black'},
         },
       },
       animation: {
