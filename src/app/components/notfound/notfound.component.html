@@ -1,1 +1,12 @@
-<p>notfound works!</p>
+<div *ngIf="errorMessage">
+  <span [routerLink]="['/landing']"
+        class="error">
+    {{ errorMessage }}
+  </span>
+</div>
+<div *ngIf="!errorMessage">
+  <span [routerLink]="['/landing']"
+        class="error">
+    404
+  </span>
+</div>

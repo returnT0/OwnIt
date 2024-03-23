@@ -30,4 +30,8 @@
   .nav_header {
     @apply transition-colors ease-in-out cursor-pointer hover:text-dark-1/80 active:text-dark-1/60 !important;
   }
+
+  .error {
+    @apply text-heading1-semibold font-bebas cursor-pointer;
+  }
 }

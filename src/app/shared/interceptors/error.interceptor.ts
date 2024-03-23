@@ -1,23 +1,26 @@
+import { Injectable } from '@angular/core';
 import {
   HttpErrorResponse,
   HttpEvent,
   HttpHandler,
   HttpInterceptor,
-  HttpRequest
+  HttpRequest,
 } from '@angular/common/http';
-import {Injectable} from "@angular/core";
-import {catchError, Observable, throwError} from "rxjs";
+import { catchError, Observable, throwError } from 'rxjs';
+import {ErrorService} from "../services/error.service";
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
 
-  constructor() {}
+  constructor(private errorService: ErrorService) {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {
-        console.error('error occurred:', error);
-        return throwError(error);
+        const errorMessage = error.error.message || 'An unknown error occurred!';
+        this.errorService.reportError(errorMessage);
+        console.error('Error occurred:', error);
+        return throwError(() => new Error(errorMessage));
       })
     );
   }
