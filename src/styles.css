@@ -19,8 +19,16 @@
     @apply bg-none text-center border-0 placeholder-stone-400 focus:outline-none focus:ring-0 focus:border-none block w-full !important;
   }
 
+  .form_div_link {
+    @apply text-dark-1 font-bellota text-base-medium tracking-wide;
+  }
+
+  .form_link {
+    @apply text-dark-1 underline font-bellota text-base-semibold tracking-wide cursor-pointer hover:text-dark-1/80 active:text-dark-1/60 transition-colors ease-in-out;
+  }
+
   .form_button {
-    @apply bg-dark-1 text-light-1 py-2 px-3 w-[10.3em] font-bebas rounded-sm tracking-wide cursor-pointer hover:bg-dark-1/90 active:bg-dark-1/80 transition-colors ease-in-out;
+    @apply bg-dark-1 text-light-1 py-2 px-3 mt-3 w-[10.3em] font-bebas rounded-sm tracking-wide cursor-pointer hover:bg-dark-1/90 active:bg-dark-1/80 transition-colors ease-in-out;
   }
 
   .nav_div {

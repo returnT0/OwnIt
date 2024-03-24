@@ -1,1 +1,28 @@
-<p>sign-up works!</p>
+<section class="flex flex-col justify-center items-center -mt-4">
+  <div class="flex justify-center items-center text-center ">
+    <div class="h-fit w-full">
+      <div class="flex flex-col gap-y-6 items-center justify-center text-center font-hepta text-heading2-normal">
+        <div *ngIf="showNames" class="div_form_input">
+          <input type="text" [(ngModel)]="username" (ngModelChange)="onDomainChange()" class="form_input"
+                 placeholder="Enter your username" autocomplete="false"/>
+        </div>
+        <div class="div_form_input">
+          <input type="email" [(ngModel)]="email" (ngModelChange)="onEmailChange()" class="form_input"
+                 placeholder="Enter your email" autocomplete="false"/>
+        </div>
+        <div class="div_form_input">
+          <input type="password" [(ngModel)]="password" (ngModelChange)="onPasswordChange()" class="form_input"
+                 placeholder="Enter your password" autocomplete="false"/>
+        </div>
+        <div *ngIf="showSubmitButton" class="div_form_input">
+          <button class="form_button">Join</button>
+        </div>
+        <div class="div_form_input">
+          <div class="form_div_link">
+            <span>Already been here? <a [routerLink]="['/sign-in']" class="form_link">Log in</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
