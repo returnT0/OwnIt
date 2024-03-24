@@ -2,7 +2,8 @@
   <div class="absolute top-4 left-4">
     <div class="nav_div">
       <p [routerLink]="['/landing']" class="nav_header">home</p>
-      <p [routerLink]="['/profile']" class="nav_header">profile</p>
+      <p *ngIf="authService.isLoggedIn()" [routerLink]="['/profile']" class="nav_header">profile</p>
+      <p [routerLink]="['/sign-in']" class="nav_header">join</p>
       <p [routerLink]="['/about']" class="nav_header">about</p>
     </div>
   </div>

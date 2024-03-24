@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-helpinfo', templateUrl: './helpinfo.component.html', styleUrl: './helpinfo.component.css'
+  selector: 'app-helpinfo', templateUrl: './helping.component.html', styleUrl: './helping.component.css'
 })
-export class HelpinfoComponent implements OnInit {
+export class HelpingComponent implements OnInit {
   showHelpIcon = false;
   showHoverText = false;
 
